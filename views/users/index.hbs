@@ -1,0 +1,7 @@
+<h1>All Donuts <a href='/users/new'>( new )</a></h1>
+
+<div>
+    {{#each users}}
+        <div>Username: {{this.username}} <a href='/users/{{this._id}}'>Go to donut</a></div>
+    {{/each}}
+</div>
