@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/coffee-shop', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/donut-shop', { useNewUrlParser: true })
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var donutsRouter = require('./routes/donuts');
 
 var app = express();
 
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/donuts', donutsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

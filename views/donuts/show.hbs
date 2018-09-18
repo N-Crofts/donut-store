@@ -1,0 +1,11 @@
+<h1>Showing One Donut</h1>
+
+<div>Donut Name: {{donut.donutname}}</div>
+{{!-- <div>City: {{donut.city}}</div> --}}
+
+<form action='/donuts/{{donut._id}}?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete donut">
+</form>
+
+<div><a href='/donuts/{{donut._id}}/edit'>Edit Donut</a></div>
+<div><a href='/donuts'>Go Back to Donuts</a></div>
